@@ -121,7 +121,7 @@ function start(){
 		isDataArrive = true
 		$.each(newsList, function(idx, news){
 			var $node = getNode(news)
-			$node.find('img').load(function(){
+			$node.find('img').on('load',function(){
 				$('#pic-ct').append($node)
 				console.log($node, 'loaded...')
 				waterFallPlace($node)
